@@ -1,8 +1,9 @@
 # BUPA-Liver-Disorders-data-set
 August 2019 Programming and Scripting Project
+
 Higher Diploma in Data Analytics Course, Galway Mayo Institute of Technology
+
 Zara Quail 
-August 2019
 
 BUPA Liver Disorders Data Set Summary
 
