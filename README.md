@@ -17,7 +17,80 @@ row 143 and 150:   91,63,25,26,15,6.0,1
 
 row 170 and 176:   97,71,29,22,52,8.0,1
 
+Downloading the Data set: I downloaded tha data set file (bupa.data) to a folder (BUPA-Liver_Disorder-data-set) on my desktop.
+
+Read the data set: I wrote python code to read the data set as shown in Readdata.py file as follows [5]:
+
+f = open('bupa.data', 'r')
+
+s = f.read()
+
+print(s)
+
+f.close()
+
+When the above Readdata.py Python code was run, it generated the full data set in the command prompt interface.
+
+I calculated the mean value of each column by writing Python code as shown in mean.py as follows :
+# Zara Quail August 2019 Assignment
+
+# Calculate the mean number in each column of the BUPA Liver Disorders data set
+# Reference: Ian McLoughlin. Matplotlib Pyplot video. 2018. https://web.microsoftstream.com/video/f0788c1c-c7bd-4347-98ac-477186938ed7 
+# Python Code:
+
+import numpy
+
+# Read data file into array.
+data = numpy.genfromtxt('bupa.data', delimiter=',')
+
+#python code:
+firstcol = data[:,0]
+meanfirstcol = numpy.mean(data[:,0])
+
+print("Mean of first column is: ", meanfirstcol)
+
+# Terminal input and output:
+In [13]: run mean.py
+Mean of first column is:  90.15942028985508
+
+# I calculated the minimum and maxiumum value of each column by writing Python code in the terminal as shown in as follows:
+
+In [9]: numpy.min(firstcol)
+Out[9]: 65.0
+
+In [12]: numpy.max(firstcol)
+Out[12]: 103.0
+
+# I ran a matplotlib.pyploy command for the furst colum to generate a histogram for the mean corpuscular volume (MCV)column which presented as follows:
+Histogram for first column MCV
+
+
+
+
+
+
+
+
+
+
+
+
+
+I calculated the maximum value of each column by writing Python code as shown in maximum.py as follows :
+
+
+
+
+I created plots of the variables by writing Python code as shown in plots.py as follows:
+
+
+
+
 References
 1. Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. Liver Disorders Data Set. 1990. https://archive.ics.uci.edu/ml/datasets/liver+disorders 
 2. McDermott, J. & Forsyth, R.S. (2016). Diagnosing a disorder in a classification benchmark. Pattern
 Recognition Letters, 73, 41-43. https://www.richardsandesforsyth.net/pubs/JMRF_DiagnosingDisorder_PRL2016.pdf
+3. A Little Book of Python for Multivariate Analysis by Yiannis Gatsoulis is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Based on a work at A Little Book of R for Multivariate Analysis by Avril Coghlan licensed under CC-BY-3.0. https://python-for-multivariate-analysis.readthedocs.io/
+4. Academind. Python for Data Analysis Tutorial - Setup, Read File & First Chart. 2018. https://www.youtube.com/watch?v=cXP_i5-nTXg
+5. Ian McLoughlin. Opening files for reading and writing. 2019. https://web.microsoftstream.com/video/72484dfc-1b50-4223-8039-bd6a69cab573
+6. Ian McLoughlin. Matplotlib Pyplot video. 2018. https://web.microsoftstream.com/video/f0788c1c-c7bd-4347-98ac-477186938ed7
