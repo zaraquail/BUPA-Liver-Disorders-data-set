@@ -34,7 +34,7 @@ f.close()
 When the above Readdata.py Python code was run, it generated the full data set in the command prompt interface.
 
 ### Calculate the mean value of each column
-I calculated the mean value of each column by writing Python code as shown in BUPA.py and the results were as follows follows:
+I calculated the mean value of each column by writing Python code as shown in BUPAMean.py and the results were as follows follows:
 
 Mean of first column is:  90.15942028985508
 Mean of second column is:  69.8695652173913
@@ -43,6 +43,11 @@ Mean of fourth column is:  24.643478260869564
 Mean of fifth column is:  38.28405797101449
 Mean of sixth column is:  3.455072463768116
 Mean of seventh column is:  1.5797101449275361
+
+####Table of Mean Values for Columns in BUPA Data set
+MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
+--- | ------- | ---- | ---- | ------- | ------ | ---------------
+90.15942028985508 | 69.8695652173913 | 30.405797101449274 | 24.643478260869564 | 38.28405797101449 | 3.455072463768116 | 1.5797101449275361
 
 import numpy
 
