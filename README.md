@@ -6,7 +6,7 @@
 
 ### BUPA Liver Disorders Data Set Summary
 
-The BUPA Liver Disorders data set was created by BUPA Medical Research Limited and was donated to the UCI Machine Learning Repository by Richard S. Forsyth in May 1990.[1] The data set is multivariate and includes categorical, integer and real attributes.[1] Each line of the data records  7 variables from one of a total of 345 male individuals.[1] The variables represented include the results of 5 blood tests that are considered potentially indicative of liver disorders that are caused by drinking excess alcohol.[1] The blood test results are the first 5 variables and include: 1) mean corpuscular volume (MCV), 2) alkaline phosphatase (alk phos), 3) alanine aminotransferase (sgpt), 4) aspartate aminotransferase (sgot), 5) gamma-glutamyl transpeptidase (gamma gt). The sixth variable is the number of half-pint equivalents of alcoholic beverages drunk per day (drinks) and the seventh variable is the selector field created by the BUPA researchers to split the data into train/test sets.[1] The data set would be considered to be complete as there are no missing values. [1] It is noted that the data set does not present any variables that denote the presence or absence of a liver disorder for each of the individuals.[1] The data set has often been utilised as a benchmark dataset.[2] However,  as noted by authors McDermott and Forsyth in 2016, the last variable of the data set has been incorrectly interpreted by some as a classification label, rather than the test/train indicator, resulting in useless results and potentially dangerous and incorrect assignment of a liver disease to an individual.[2] In addition, duplicates have been noted in the following data set rows:[1]
+The BUPA Liver Disorders data set was created by BUPA Medical Research Limited and was donated to the UCI Machine Learning Repository by Richard S. Forsyth in May 1990.[1] The data set is multivariate and includes categorical, integer and real attributes.[1] Each line of the data records  7 variables from one of a total of 345 male individuals.[1] The variables represented include the results of 5 blood tests that are considered potentially indicative of liver disorders that are caused by drinking excess alcohol.[1] The blood test results are the first 5 variables and include: 1) mean corpuscular volume (MCV), 2) alkaline phosphatase (alk phos), 3) alanine aminotransferase (sgpt), 4) aspartate aminotransferase (sgot), 5) gamma-glutamyl transpeptidase (gamma gt). The sixth variable is the number of half-pint equivalents of alcoholic beverages drunk per day (drinks) and the seventh variable is the selector field created by the BUPA researchers to split the data into train/test sets.[1] The data set would be considered to be complete as there are no missing values. [1] It is noted that the data set does not present any variables that denote the presence or absence of a liver disorder for each of the individuals.[1] The data set has often been utilised as a benchmark dataset.[2] However,  as noted by authors McDermott and Forsyth in 2016, the last variable of the data set has been incorrectly interpreted by some as a classification label, rather than the test/train indicator, resulting in useless results and potentially dangerous and incorrect assignment of a liver disease to an individual.[2] In addition, duplicates have been noted in the following data set rows [1]:
 
 row 84 and 86:   94,58,21,18,26,2.0,2
 
@@ -33,8 +33,8 @@ f.close()
 
 When the above Readdata.py Python code was run, it generated the full data set in the command prompt interface.
 
-### Calculate the mean value of each column
-I calculated the mean value of each column by writing Python code as shown in BUPAMean.py and the results were as follows follows:
+### Calculating the mean value of each column
+I calculated the mean value of each column by writing Python code as shown in BUPAMean.py and the results were as follows [6]:
 
 Mean of first column is:  90.15942028985508
 
@@ -50,39 +50,109 @@ Mean of sixth column is:  3.455072463768116
 
 Mean of seventh column is:  1.5797101449275361
 
-####Table of Mean Values for Columns in BUPA Data set
+**Table of Mean Values for Columns in BUPA Liver Disorders Data set**
 
 MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
-
 --- | ------- | ---- | ---- | ------- | ------ | ---------------
-
 90.15942028985508 | 69.8695652173913 | 30.405797101449274 | 24.643478260869564 | 38.28405797101449 | 3.455072463768116 | 1.5797101449275361
+
+{Note: I am not sure why my table is not displaying as a table on Github although I followed the instructions for Markdown}
+
+As an example for the first column the code was as shown below and for each subsequent column I increase the number after the , in the bracket [:,1][:,2] etc as shown in BUPAMean.py file.[6]
 
 import numpy
 
-# Read data file into array.
+>Read data file into array.
 data = numpy.genfromtxt('bupa.data', delimiter=',')
 
-#python code:
+>python code
 firstcol = data[:,0]
 meanfirstcol = numpy.mean(data[:,0])
 
 print("Mean of first column is: ", meanfirstcol)
 
-# Terminal input and output:
-In [13]: run mean.py
-Mean of first column is:  90.15942028985508
+I ran a matplotlib.pyploy command within the Python code in BUPAMean.py file for each column to generate a histogram for each column. I saved the generated histogram fo eahc column and later edited them in 3D Paint to add titles and lable the x and y axes. I noticed that including the Python code for the matplotlib.pyploy commands after the code for the mean values, I had to save and close each histogram as it was generated before the code would continue to run for the remaining columns.
 
-# I calculated the minimum and maxiumum value of each column by writing Python code in the terminal as shown in as follows:
+**Histograms for Columns in BUPA Liver Disorders Data set**
+![Column1_MCV_Histogram](Column1_MCV_Histogram.png)
+
+![Column2_alkphos_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column2_alkphos_Histogram.png)
+
+![Column3_sgpt_Histogram](url)
+
+![Column4_sgot_Histogram](url)
+
+![Column5_gammagt_Histogram](url)
+
+![Column6_drinks_Histogram](url)
+
+![Column7_traintestsets_Histogram](url)
+
+
+### Calculating the minimum value of each column
+The minimum values of each columns are presented below.
+
+**Table of Minimum Values for Columns in BUPA Liver Disorders Data set**
+
+MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
+--- | ------- | ---- | ---- | ------- | ------ | ---------------
+65.0 | 23.0 | 4.0 | 5.0 | 5.0 | 0.0 | 1.0
+
+
+I calculated the minimum and maxiumum value of each column by writing Python code in the terminal as shown in as follows [7]:
 
 In [9]: numpy.min(firstcol)
 Out[9]: 65.0
 
+In [5]: numpy.min(secondcol)
+Out[5]: 23.0
+
+In [6]: numpy.min(thirdcol)
+Out[6]: 4.0
+
+In [7]: numpy.min(fourthcol)
+Out[7]: 5.0
+
+In [8]: numpy.min(fifthcol)
+Out[8]: 5.0
+
+In [9]: numpy.min(sixthcol)
+Out[9]: 0.0
+
+In [10]: numpy.min(seventhcol)
+Out[10]: 1.0
+
+### Calculating the maximum value of each column
+The maximum values of each columns are presented below.
+
+**Table of Minimum Values for Columns in BUPA Liver Disorders Data set**
+
+MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
+--- | ------- | ---- | ---- | ------- | ------ | ---------------
+103.0 | 138.0 | 155.0 | 82.0 | 297.0 | 20.0 | 2.0
+
 In [12]: numpy.max(firstcol)
 Out[12]: 103.0
 
-# I ran a matplotlib.pyploy command for the furst colum to generate a histogram for the mean corpuscular volume (MCV)column which presented as follows:
-Histogram for first column MCV
+In [11]: numpy.max(secondcol)
+Out[11]: 138.0
+
+In [12]: numpy.max(thirdcol)
+Out[12]: 155.0
+
+In [13]: numpy.max(fourthcol)
+Out[13]: 82.0
+
+In [14]: numpy.max(fifthcol)
+Out[14]: 297.0
+
+In [15]: numpy.max(sixthcol)
+Out[15]: 20.0
+
+In [16]: numpy.max(seventhcol)
+Out[16]: 2.0
+
+
 
 
 
