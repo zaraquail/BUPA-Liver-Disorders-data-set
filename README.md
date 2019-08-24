@@ -155,10 +155,10 @@ Out[15]: 20.0
 In [16]: numpy.max(seventhcol)
 Out[16]: 2.0
 
-###Conclusion
+### Conclusion
 The BUPA Liver Disorders data set is a good example of a multivariate data set. In this project I have demonstrated how Python can be used to assess a data set by using Python code to calculate the mean, maximum and minimum values and generate histograms for each column. The project has also made use of Git and Git Hub for commits and pushes of the files to my Git Hub repository. It is thanks to the lecturer that I was able to complete this.
 
-###References
+### References
 1. Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. Liver Disorders Data Set. 1990. https://archive.ics.uci.edu/ml/datasets/liver+disorders 
 2. McDermott, J. & Forsyth, R.S. (2016). Diagnosing a disorder in a classification benchmark. Pattern
 Recognition Letters, 73, 41-43. https://www.richardsandesforsyth.net/pubs/JMRF_DiagnosingDisorder_PRL2016.pdf
