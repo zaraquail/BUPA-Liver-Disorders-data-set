@@ -34,7 +34,7 @@ f.close()
 When the above Readdata.py Python code was run, it generated the full data set in the command prompt interface.
 
 ### Calculating the mean value of each column
-I calculated the mean value of each column by writing Python code as shown in BUPAMean.py and the results were as follows [6]:
+I calculated the mean value of each column by writing Python code as shown in BUPAMean.py and the results were as follows and also displayed in *Table 1* [6]:
 
 Mean of first column is:  90.15942028985508
 
@@ -50,13 +50,11 @@ Mean of sixth column is:  3.455072463768116
 
 Mean of seventh column is:  1.5797101449275361
 
-**Table of Mean Values for Columns in BUPA Liver Disorders Data set**
+**Table 1: Mean Values for Columns in BUPA Liver Disorders Data set**
 
 MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
 --- | ------- | ---- | ---- | ------- | ------ | ---------------
 90.15942028985508 | 69.8695652173913 | 30.405797101449274 | 24.643478260869564 | 38.28405797101449 | 3.455072463768116 | 1.5797101449275361
-
-{Note: I am not sure why my table is not displaying as a table on Github although I followed the instructions for Markdown}
 
 As an example for the first column the code was as shown below and for each subsequent column I increase the number after the , in the bracket [:,1][:,2] etc as shown in BUPAMean.py file.[6]
 
@@ -71,28 +69,30 @@ meanfirstcol = numpy.mean(data[:,0])
 
 print("Mean of first column is: ", meanfirstcol)
 
-I ran a matplotlib.pyploy command within the Python code in BUPAMean.py file for each column to generate a histogram for each column. I saved the generated histogram fo eahc column and later edited them in 3D Paint to add titles and lable the x and y axes. I noticed that including the Python code for the matplotlib.pyploy commands after the code for the mean values, I had to save and close each histogram as it was generated before the code would continue to run for the remaining columns.
+**Histograms for each column**
+
+I ran a matplotlib.pyploy command within the Python code in BUPAMean.py file for each column to generate a histogram for each column. I saved the generated histogram fo each column and later edited them in 3D Paint to add titles and lable the x and y axes. I noticed that including the Python code for the matplotlib.pyploy commands after the code for the mean values in the same python file, I had to save and close each histogram as it was generated before the code would continue to run for the remaining columns.
 
 **Histograms for Columns in BUPA Liver Disorders Data set**
-![Column1_MCV_Histogram](Column1_MCV_Histogram.png)
+![Column1_MCV_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column1_MCV_Histogram.png)
 
 ![Column2_alkphos_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column2_alkphos_Histogram.png)
 
-![Column3_sgpt_Histogram](url)
+![Column3_sgpt_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column3_sgpt_Histogram.png)
 
-![Column4_sgot_Histogram](url)
+![Column4_sgot_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column4_sgot_Histogram.png)
 
-![Column5_gammagt_Histogram](url)
+![Column5_gammagt_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column5_gammagt_Histogram.png)
 
-![Column6_drinks_Histogram](url)
+![Column6_drinks_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column6_drinks_Histogram.png)
 
-![Column7_traintestsets_Histogram](url)
+![Column7_traintestsets_Histogram](https://github.com/zaraquail/BUPA-Liver-Disorders-data-set/blob/master/Column7_traintestsets_Histogram.png)
 
 
 ### Calculating the minimum value of each column
-The minimum values of each columns are presented below.
+The minimum values of each columns are presented in *table 2* below.
 
-**Table of Minimum Values for Columns in BUPA Liver Disorders Data set**
+**Table 2: Minimum Values for Columns in BUPA Liver Disorders Data set**
 
 MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
 --- | ------- | ---- | ---- | ------- | ------ | ---------------
@@ -123,13 +123,15 @@ In [10]: numpy.min(seventhcol)
 Out[10]: 1.0
 
 ### Calculating the maximum value of each column
-The maximum values of each columns are presented below.
+The maximum values of each columns are presented in *table 3* below.
 
-**Table of Minimum Values for Columns in BUPA Liver Disorders Data set**
+**Table 3: Maximum Values for Columns in BUPA Liver Disorders Data set**
 
 MCV | alkphos | sgpt | sgot | gammagt | drinks | train/test sets
 --- | ------- | ---- | ---- | ------- | ------ | ---------------
 103.0 | 138.0 | 155.0 | 82.0 | 297.0 | 20.0 | 2.0
+
+I calculated the minimum and maxiumum value of each column by writing Python code in the terminal as shown in as follows [7]:
 
 In [12]: numpy.max(firstcol)
 Out[12]: 103.0
@@ -153,20 +155,6 @@ In [16]: numpy.max(seventhcol)
 Out[16]: 2.0
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-I calculated the maximum value of each column by writing Python code as shown in maximum.py as follows :
 
 
 
