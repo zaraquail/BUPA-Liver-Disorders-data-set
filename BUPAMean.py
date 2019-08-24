@@ -1,7 +1,7 @@
 # Zara Quail August 2019 Assignment
 
 # Calculate the mean number in each column of the BUPA Liver Disorders data set
-# Reference: Ian McLoughlin. Matplotlib Pyplot video. 2018. https://web.microsoftstream.com/video/f0788c1c-c7bd-4347-98ac-477186938ed7 
+# References: Ian McLoughlin. Matplotlib Pyplot video. 2018. https://web.microsoftstream.com/video/f0788c1c-c7bd-4347-98ac-477186938ed7 ; Ian McLoughlin. Numpy video. 2018  https://web.microsoftstream.com/video/74b18405-5ee1-47f0-a42d-e8831a453a91
 # Column 1
 
 import numpy
