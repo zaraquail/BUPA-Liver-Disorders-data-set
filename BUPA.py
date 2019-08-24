@@ -77,10 +77,23 @@ pl.show()
 # Find the mean of the sixth column
 
 sixthcol = data[:,5]
-meanfifthcol = numpy.mean(data[:,5])
+meansixthcol = numpy.mean(data[:,5])
 
 print("Mean of sixth column is: ", meansixthcol)
 
 import matplotlib.pyplot as pl
 pl.hist(sixthcol)
+pl.show()
+
+# Column 7 (train/test sets)
+
+# Find the mean of the seventh column
+
+seventhcol = data[:,6]
+meanseventhcol = numpy.mean(data[:,6])
+
+print("Mean of seventh column is: ", meanseventhcol)
+
+import matplotlib.pyplot as pl
+pl.hist(seventhcol)
 pl.show()
